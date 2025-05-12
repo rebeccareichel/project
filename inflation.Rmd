@@ -2,7 +2,7 @@
 title: "Inflation Data"
 author: "Aaron Peikert"
 date: "`r Sys.Date()`"
-output: html_document
+output: pdf_document
 repro:
   packages:
     - here
@@ -60,25 +60,4 @@ inflation %>%
   labs(x="", y="Subjective inflation in %", color="") +
   theme_classic()
 ```
-
-Get Git PAT & link to GitHub.
-
-```{r git-pat}
-usethis::create_github_token(description = "Token for Repro Workshop 2025")
-
-gitcreds::gitcreds_set()
-
-usethis::use_github()
-```
-
-Create Dockerfile & setup automatic image generation.
-
-```{r dockerfile}
-repro::automate()
-
-repro::use_gha_docker()
-```
-
-
-
 
