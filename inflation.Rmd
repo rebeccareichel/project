@@ -19,6 +19,13 @@ repro:
 repro::automate_load_packages()
 repro::automate_load_scripts()
 knitr::opts_chunk$set(echo = FALSE)
+
+usethis::use_git_config(
+  user.name = "rebeccareichel",
+  user.email = "rebecca.reichel@medicalschool-berln.de",
+  init.defaultBranch = "main") # <-- not necessary but kinder than 'master'
+
+usethis::use_git()
 ```
 
 The dataset we use stems from the [Bank of England Research datasets](https://www.bankofengland.co.uk/statistics/research-datasets).
