@@ -57,5 +57,6 @@ inflation %>%
   ungroup() %>% 
   ggplot() +
   geom_line(aes(date, value, color = name)) +
-  NULL
+  labs(x="", y="Subjective inflation in %", color="") +
+  theme_classic()
 ```
