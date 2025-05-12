@@ -47,7 +47,7 @@ I quote:
 For this dataset the Bank of England asked `r prettyNum(nrow(inflation), big.mark = ".", decimal.mark = ",")` people for their opinion on the perceived and expected inflation.
 The survey has run quarterly since `r min(inflation$year)`.
 
-```{r}
+```{r plot}
 inflation %>% 
   group_by(date) %>% 
   summarise(across(c(perception, expectation),
@@ -60,3 +60,22 @@ inflation %>%
   labs(x="", y="Subjective inflation in %", color="") +
   theme_classic()
 ```
+
+Get Git PAT & link to GitHub.
+
+```{r git-pat}
+usethis::create_github_token(description = "Token for Repro Workshop 2025")
+
+gitcreds::gitcreds_set()
+
+usethis::use_github()
+```
+
+Create Dockerfile.
+
+```{r dockerfile}
+repro::automate()
+```
+
+
+
