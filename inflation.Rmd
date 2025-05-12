@@ -71,11 +71,14 @@ gitcreds::gitcreds_set()
 usethis::use_github()
 ```
 
-Create Dockerfile.
+Create Dockerfile & setup automatic image generation.
 
 ```{r dockerfile}
 repro::automate()
+
+repro::use_gha_docker()
 ```
+
 
 
 
